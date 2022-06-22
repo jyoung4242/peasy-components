@@ -10,14 +10,12 @@ import { PUIComponent } from './components/componentType';
 let myComponents: PUIComponent[] = [HeaderComponent, ButtonComponent, ContentComponent, ModalComponent];
 
 const loadComponents = (): void => {
-    myComponents.forEach(component => {
-        console.log(`component string`, component.template);
-        console.log('component model', component.model);
-        UI.create(document.body, component.template, component.model);
-    });
+    myComponents.forEach(component => UI.create(document.body, component.template, component.model));
+    ButtonComponent.onMount(ModalComponent.model, HeaderComponent.model);
 };
+
 loadComponents();
 
 setInterval(() => {
     UI.update();
-}, 300);
+}, 100);
