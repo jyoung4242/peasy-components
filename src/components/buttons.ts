@@ -12,7 +12,7 @@ export const ButtonComponent: PUIComponent = {
             console.log(`I clicked button 1`);
         },
         onclick2: (_ev, model, element) => {
-            console.log(`I clicked button 2`);
+            model.isVisible = true;
         },
     },
 };
