@@ -16,3 +16,7 @@ const loadComponents = (): void => {
     });
 };
 loadComponents();
+
+setInterval(() => {
+    UI.update();
+}, 300);
