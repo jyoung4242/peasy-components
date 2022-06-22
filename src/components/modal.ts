@@ -1,7 +1,7 @@
-import { PUIComponent } from './componentType';
+import { PUIComponent } from './component';
 
-export const ModalComponent: PUIComponent = {
-    template: `
+class cModalComponent extends PUIComponent {
+    template = `
     <div>
         <div \${ === isVisible}>
             <div class="outermodaldiv"></div>
@@ -10,12 +10,15 @@ export const ModalComponent: PUIComponent = {
                 <button \${click @=> closeModal} class="modalButton">Close</button>
             </div>
         </div>
-    </div>`,
-    model: {
+    </div>`;
+    model = {
         isVisible: false,
         closeModal: (_ev, model, element) => {
             console.log(`model: `, model);
             model.isVisible = false;
         },
-    },
-};
+    };
+
+    onLoad = () => {};
+}
+export const ModalComponent = new cModalComponent();
