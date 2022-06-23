@@ -1,9 +1,10 @@
-import { PUIComponent } from './component';
+import { PUIComponent } from '../lib/component';
 let ModalRef;
 let HeaderRef;
 let toggle = false;
 
 class cButtonComponent extends PUIComponent {
+    componentName: 'myButtons';
     template = `
     <div>
         <button \${click @=> onclick1}>click 1</button>
@@ -11,7 +12,7 @@ class cButtonComponent extends PUIComponent {
     </div>
     `;
     model = {
-        onclick1: (_ev, model, element) => {
+        onclick1: () => {
             if (toggle) {
                 HeaderRef.myText = HeaderRef.myText + ' -> I clicked button 1';
                 toggle = false;
@@ -20,7 +21,7 @@ class cButtonComponent extends PUIComponent {
                 toggle = true;
             }
         },
-        onclick2: (_ev, model, element) => {
+        onclick2: () => {
             ModalRef.isVisible = true;
         },
     };
