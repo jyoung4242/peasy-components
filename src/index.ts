@@ -11,7 +11,7 @@ let body = document.body;
 
 const uiStringTemplate = `
     <div>
-        ${HeaderComponent.template}
+        \${HeaderComponent.template}
     </div>
 `;
 
