@@ -21,12 +21,11 @@ const uiStringTemplate = `
 let model = {};
 model = {
     [HeaderComponent.componentName]: HeaderComponent.model,
-    [ButtonComponent.componentName]: HeaderComponent.model,
-    [ModalComponent.componentName]: HeaderComponent.model,
-    [ContentComponent.componentName]: HeaderComponent.model,
+    [ButtonComponent.componentName]: ButtonComponent.model,
+    [ModalComponent.componentName]: ModalComponent.model,
+    [ContentComponent.componentName]: ContentComponent.model,
 };
-console.log(`model: `, model);
-
+ButtonComponent.onload(ModalComponent.model, HeaderComponent.model);
 UI.create(body, uiStringTemplate, model);
 
 setInterval(() => {
