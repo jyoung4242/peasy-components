@@ -7,8 +7,6 @@ import { ButtonComponent } from './components/buttons';
 import { ModalComponent } from './components/modal';
 import { ContentComponent } from './components/content';
 
-let body = document.body;
-
 const uiStringTemplate = `
     <div>
         ${HeaderComponent.template}
@@ -26,7 +24,7 @@ model = {
     [ContentComponent.componentName]: ContentComponent.model,
 };
 ButtonComponent.onload(ModalComponent.model, HeaderComponent.model);
-UI.create(body, uiStringTemplate, model);
+UI.create(document.body, uiStringTemplate, model);
 
 setInterval(() => {
     UI.update();
