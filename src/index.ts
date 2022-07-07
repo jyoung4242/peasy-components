@@ -32,9 +32,3 @@ UI.create(body, uiStringTemplate, model);
 setInterval(() => {
     UI.update();
 }, 50);
-
-/*
-import { ButtonComponent } from './components/buttons';
-import { ContentComponent } from './components/content';
-import { ModalComponent } from './components/modal';
- */
