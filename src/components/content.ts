@@ -1,5 +1,5 @@
 class cContentComponent {
-    componentName: 'myContent';
+    componentName: string = 'myContent';
     template: string = `
     <div>
         <p>

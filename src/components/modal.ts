@@ -1,6 +1,6 @@
 class cModalComponent {
-    componentName: 'myModal';
-    template = `
+    componentName: string = 'myModal';
+    template: string = `
     <div>
         <div \${ === isVisible}>
             <div class="outermodaldiv"></div>

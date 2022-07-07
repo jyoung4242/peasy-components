@@ -1,8 +1,8 @@
 class cHeaderComponent {
-    componentName: 'myHeader';
+    componentName: string = 'myHeader';
     template: string = `
     <div>
-        <h1>\${myText}</h1>
+        <h1>\${myHeader.myText}</h1>
     </div>
     `;
     model: object = {

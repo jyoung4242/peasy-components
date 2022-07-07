@@ -3,7 +3,7 @@ let HeaderRef;
 let toggle = false;
 
 class cButtonComponent {
-    componentName: 'myButtons';
+    componentName: string = 'myButtons';
     template = `
     <div>
         <button \${click @=> onclick1}>click 1</button>
