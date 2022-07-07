@@ -7,13 +7,18 @@ import { ContentComponent } from './components/content';
 import { HeaderComponent } from './components/header';
 import { ModalComponent } from './components/modal';
 
-let myComponents = [HeaderComponent, ButtonComponent, ContentComponent, ModalComponent];
+let body = document.body;
 
-const loadComponents = (): void => {
-    myComponents.forEach(component => UI.create(document.body, component.template, component.model));
-    ButtonComponent.onLoad(ModalComponent.model, HeaderComponent.model);
-};
-loadComponents();
+const uiStringTemplate = `
+    <div>
+        ${HeaderComponent.template}
+    </div>
+`;
+
+let model = {};
+ model = {...model, HeaderComponent.model};
+
+UI.create(body, uiStringTemplate, model);
 
 setInterval(() => {
     UI.update();

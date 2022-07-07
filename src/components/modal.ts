@@ -1,6 +1,4 @@
-import { PUIComponent } from '../lib/component';
-
-class cModalComponent extends PUIComponent {
+class cModalComponent {
     componentName: 'myModal';
     template = `
     <div>

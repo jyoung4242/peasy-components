@@ -1,6 +1,4 @@
-import { PUIComponent } from '../lib/component';
-
-class cHeaderComponent extends PUIComponent {
+class cHeaderComponent {
     componentName: 'myHeader';
     template: string = `
     <div>
