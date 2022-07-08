@@ -28,4 +28,4 @@ UI.create(document.body, uiStringTemplate, model);
 
 setInterval(() => {
     UI.update();
-}, 50);
+}, 1000);
